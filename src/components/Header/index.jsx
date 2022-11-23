@@ -1,10 +1,10 @@
-import {Menu, Logo, TextLogo} from './styles';
+import {Menu, Logo, TextLogo, TextStrong} from './styles';
 
 const Header = () => (
   <>
     <Menu>
       <Logo src="./images/logo.svg" />
-      <TextLogo>AluraBooks</TextLogo>
+      <TextLogo><TextStrong>Alura</TextStrong>Books</TextLogo>
     </Menu>
   </>
 );
