@@ -1,30 +1,43 @@
-import {Menu, TextLogo, TextStrong, DivMenu, ListMenu} from './styles';
-import Profile from '../../images/profile.svg';
-import Bag from '../../images/bag.svg';
+import {Menu, Logo, TextLogo, TextStrong, DivList, ListMenu, ItemList, Link, DivIcons} from './styles';
 
-const ItemsMenu = ['CATEGORIAS', 'FAVORITOS','MINHA ESTANTE'];
-const Icons = [Profile, Bag];
+const linkItems = [
+  {
+    name: 'Categorias',
+    href: '#',
+  },
+  {
+    name: 'Favoritos',
+    href: '#',
+  },
+  {
+    name: 'Minha Estante',
+    href: '#',
+  },
+]
+
+const icons = ['./images/profile.svg', './images/bag.svg'];
 
 const Header = () => (
   <>
     <Menu>
-      <img src="./images/logo.svg" />
-      <TextLogo><TextStrong>Alura</TextStrong>Books</TextLogo>
-      <DivMenu>
-
+      <Logo>
+        <img src="./images/logo.svg" />
+        <TextLogo><TextStrong>Alura</TextStrong>Books</TextLogo>
+      </Logo>
+      
+      <DivList>
         <ListMenu>
-          { ItemsMenu.map((Item) => (
-            <li><p>{Item}</p></li>
+          { linkItems.map((item) => (
+            <ItemList><Link href={item.href}>{item.name}</Link></ItemList>
           ))}
         </ListMenu>
 
-        <div>
-          {Icons.map((Icon) => (
-            <img src={Icon}/>
+        <DivIcons>
+          {icons.map((icon) => (
+            <img src={icon}/>
           ))}
-        </div>
-        
-      </DivMenu>
+        </DivIcons>
+      </DivList>
     </Menu>
   </>
 );
