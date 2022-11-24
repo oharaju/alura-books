@@ -9,13 +9,17 @@ export const Menu = styled.header`
   align-items: center; 
 `
 
-export const Logo = styled.img`
-`;
-
 export const TextLogo = styled.p`
-  font-size: 20px;
+  font-size: 24px;
 `
 
 export const TextStrong = styled.span`
   font-weight: bold;
+`
+
+export const DivMenu = styled.div`
+  display: flex;
+`
+
+export const ListMenu = styled.ul`
 `
