@@ -24,14 +24,12 @@ const Header = () => (
         <img src="./images/logo.svg" />
         <TextLogo><TextStrong>Alura</TextStrong>Books</TextLogo>
       </Logo>
-      
       <DivList>
         <ListMenu>
           { linkItems.map((item) => (
             <ItemList><Link href={item.href}>{item.name}</Link></ItemList>
           ))}
         </ListMenu>
-
         <DivIcons>
           {icons.map((icon) => (
             <img src={icon}/>
