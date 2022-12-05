@@ -11,6 +11,7 @@ const InputSearch = styled.input`
   outline: 0;
   width: 236px;
   color: ${colors.colorWhite};
+  margin-bottom: 14px;
 
   &::placeholder {
     color: ${colors.colorWhite};
