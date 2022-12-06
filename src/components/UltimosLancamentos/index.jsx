@@ -1,6 +1,8 @@
 import { Container, CardLivros, LivroLancamento, NomeLivro } from './styles';
 import { Title } from '../Title/styles';
 import { livros } from './livrosLancamento';
+import SugestaoLivros from '../SugestaoLivros';
+ 
 
 function UltimosLancamentos() {
   return (
@@ -16,7 +18,12 @@ function UltimosLancamentos() {
           ))
         }
       </CardLivros>
-      <sugestaoLivros></sugestaoLivros>
+
+      <SugestaoLivros
+        title="Talvez você se interesse por.."
+        subtitle="Angular 11"
+        description="Construindo uma aplicação com a plataforma Google"
+      />
     </Container>
   )
 }
