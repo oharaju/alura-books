@@ -12,6 +12,7 @@ export const CardLivros = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-bottom: 4rem;
 `
 
 export const LivroLancamento = styled.div`
