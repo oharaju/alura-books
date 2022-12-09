@@ -29,7 +29,7 @@ const Home = () => {
       />
       {noResults && <p>Nenhum livro encontrado</p>}
       { bookText.map( livro => (
-        <div>
+        <div key={livro.id}>
           <img src={livro.src}/>
           <p>{livro.nome}</p>
         </div>

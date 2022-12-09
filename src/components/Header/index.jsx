@@ -26,13 +26,14 @@ const Header = () => (
       </Logo>
       <DivList>
         <ListMenu>
-          { linkItems.map((item) => (
-            <ItemList><Link href={item.href}>{item.name}</Link></ItemList>
+          {
+          linkItems.map((item) => (
+            <ItemList key={item.name}><Link href={item.href}>{item.name}</Link></ItemList>
           ))}
         </ListMenu>
         <DivIcons>
           {icons.map((icon) => (
-            <img src={icon}/>
+            <img key={icon} src={icon}/>
           ))}
         </DivIcons>
       </DivList>

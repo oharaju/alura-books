@@ -3,6 +3,7 @@ import { Title } from '../Title/styles';
 import { livros } from './livrosLancamento';
 import SugestaoLivros from '../SugestaoLivros';
  
+
 function UltimosLancamentos() {
   return (
     <Container>
@@ -10,15 +11,16 @@ function UltimosLancamentos() {
       <CardLivros>
         {
           livros.map(livro => (
-            <LivroLancamento>
+            <LivroLancamento key={livro.id}>
               <img src={livro.src}/>
               <NomeLivro>{livro.nome}</NomeLivro>
             </LivroLancamento>
           ))
         }
       </CardLivros>
+
       <SugestaoLivros
-        title="Talvez você se interesse por"
+        title="Talvez você se interesse por.."
         subtitle="Angular 11"
         description="Construindo uma aplicação com a plataforma Google"
       />
