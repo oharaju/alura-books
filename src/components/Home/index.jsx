@@ -9,13 +9,19 @@ const Home = () => {
 
   const searchBooks = event => {
     const valueInput = event.target.value.toLowerCase();
-    const resultValueInput = livros.filter(livro => livro.nome.toLowerCase().includes(valueInput))
-    setBookText(resultValueInput)
+    const valueInputTrim = valueInput.trim();
 
-    if(resultValueInput.length == 0) {
-      setNoResults(true)
+    if(valueInputTrim.length > 0) {
+      const resultValueInput = livros.filter(livro => livro.nome.toLowerCase().includes(valueInputTrim));
+      setBookText(resultValueInput);
+  
+      if(resultValueInput.length == 0) {
+        setNoResults(true);
+      } else {
+        setNoResults(false);
+      }
     } else {
-      setNoResults(false)
+      setBookText([]);
     }
   }
 
@@ -26,6 +32,7 @@ const Home = () => {
       <InputSearch type="text" 
         placeholder="Escreva sua próxima leitura"
         onKeyUp={searchBooks}
+        
       />
       {noResults && <p>Nenhum livro encontrado</p>}
       { bookText.map( livro => (
